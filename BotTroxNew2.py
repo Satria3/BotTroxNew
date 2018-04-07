@@ -2,62 +2,65 @@
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
+from io import StringIO
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,os,subprocess
+import time,random,sys,json,codecs,threading,glob,sys
+import re,string,os
+import os.path,sys,urllib,shutil,subprocess
 
 satpam = LINETCR.LINE() # BotTrox# Login Pake Akun Utama Kalian(Gunanya Supaya Akun Utama Ke Kick bisa Terima Undangan dari Bot Otomatis)
-satpam.login(token="Eqek1vC7KLnK4jsWnYb0.fGIUiExEjuE1/OChSHYIia.I+U46H+FbaNeyUFj6q8tYpNBQ7cKfoHlCQ972Cv50fg=")
+satpam.login(qr=True)
 satpam.loginResult()
 
 cl = LINETCR.LINE() #BotTrox1
-cl.login(token="Eqt4hxAsQtv5a4lG4Pb2.o8LSrfCelHJhhggYpY3ECG.89tTjn7ar5yjjSmJ264c867m9A4BWxxm3qA6WDPfuQ0=")
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE() #BotTrox2
-ki.login(token="EqsBVdQi8OKTh3j6Mkx5.hSHvpJH1bE2GB8InsSg0vq.2ssZtwAkffmtOy9zrJCx0F8Gz1oV17cMQqtHU3B6fYY=")
+ki.login(qr=True)
 ki.loginResult()
 
 kk = LINETCR.LINE() #BotTrox3
-kk.login(token="EqCQV4Xbt7fHlhYgUBud.nI0+pkrzsIaJT928xZbUBq.AzE6+ebi0x+XnVazhYcPu9R9Fi+PKs9CKCKa4nAEA3Q=")
+kk.login(qr=True)
 kk.loginResult()
 
-kc = LINETCR.LINE() #BotTrix4
-kc.login(token="Eqixl8C941Gv5hRQQ1Oa.VSkC4kWnVqaJsixjMKNE/G.LZcRDlgubJxkwt6wssjfeXlOWiPDOhW6mUGoHlZK9mE=")
+kc = LINETCR.LINE() #BotTrox4
+kc.login(qr=True)
 kc.loginResult()
 
 ks = LINETCR.LINE() #BotTrox5
-ks.login(token="Eq8a1kGdhzncFNclSwE8.aWOMtct5v8ZYoiURB63+6a.uXYoZThrYy/BE6ZtIYDK/P8fmAI7+yWy2PPsJ25a4Os=")
+ks.login(qr=True)
 ks.loginResult()
 
 ka = LINETCR.LINE() #BotTrox6
-ka.login(token="EqinhCtJYhf2qsldL9Q8.jyCu5B2qelpygXkvspNkYa.clyuM1pLjwH/fW2K5peDhb5lO85xQ/Sy41aQMC4eUfc=")
+ka.login(qr=True)
 ka.loginResult()
 
 kb = LINETCR.LINE() #BotTrox7
-kb.login(token="EqDmLkbl9sozzKSc0Ceb.PpTPPNkiz0/ZXpxswLg6EW.nFxDdd/hTkAH+KyR1JfYmbgoFnLGxwNt31pQ+Ju7TN4=")
+kb.login(qr=True)
 kb.loginResult()
 
 ko = LINETCR.LINE() #BotTrox8
-ko.login(token="EqTakwU1uEsY3ySmze1a.90Ymb9xHHHXgqdGq7WeeYG.ZCCfUj6Arr12rWMUXfleBPkJ3+8jNdT+/ZWYY5tPv8k=")
+ko.login(qr=True)
 ko.loginResult()
 
 ke = LINETCR.LINE() #BotTrox9
-ke.login(token="Eq1OrNXVRXW8Y7KQcu46.mfwViEizEjvKk9PbUJ6yjG.KajgT+AHqLQGyvwe+H3kRcx+XOSuxSzT/zrNIzZDmbA=")
+ke.login(qr=True)
 ke.loginResult()
 
 ku = LINETCR.LINE() # BotTrox10
-ku.login(token="EqHeBRhevhJBZ8bdwWy0.uNIkKz2Tzq0urveBoSIbia.W/1/YdnOUV9NQ0zgSg0yCp8MAx+c6WgHSqTbvS40kZA=")
+ku.login(qr=True)
 ku.loginResult()
 
 k1 = LINETCR.LINE() #Backup (Gunanya Kalo Akun Utama Ke Kick, Dy masuk ke Group dan Ngekick yang Kick Akun Utama Dan Akun Utama Di undang sama dia,lalu dy leave lagi :D)
-k1.login(token="EqDwDPBRZITDe7TDdI61.xu+pRemObjXCqJHhZX8tqq.O0f7mBKR3LxRmcOfDOOr2BKs/n3a6DGx5/hLC8UfVe4=")
+k1.login(qr=True)
 k1.loginResult()
 
-print "login success Trox"
+print "🇲🇨⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱🇲🇨\nSELAMAT MENGGUNAKAN"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" ^[BOTTROX Bot]^
+helpMessage =""" ⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱
 OWNER •SATRIA•"""""" 
 ==============
 ||[MENU MEMBER] 
@@ -81,20 +84,10 @@ OWNER •SATRIA•""""""
 ||-[Cancel Invited]
 ||- Cancel all
 ==============
-   BOTTROX BOT
+⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱
  http://line.me/ti/p/up3NLjmK17
 =============="""
 KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
-DEF1=[ki,kk,kc,ks,ka,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF2=[cl,kk,kc,ks,ka,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF3=[cl,ki,kc,ks,ka,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF4=[cl,ki,kk,ks,ka,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF5=[cl,ki,kk,kc,ka,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF6=[cl,ki,kk,kc,ks,kb,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF7=[cl,ki,kk,kc,ks,ka,ko,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF8=[cl,ki,kk,kc,ks,ka,kb,ke,ku] #Udah Ga Kepake(Boleh di apus)
-DEF9=[cl,ki,kk,kc,ks,ka,kb,ko,ku] #Udah Ga Kepake(Boleh di apus)
-DEF10=[cl,ki,kk,kc,ks,ka,kb,ko,ke] #Udah Ga Kepake(Boleh di apus)
 mid = cl.getProfile().mid #BotTrox1
 Amid = ki.getProfile().mid #BotTrox2
 Bmid = kk.getProfile().mid #BotTrox3
@@ -120,17 +113,17 @@ wait = {
     'autoAdd':True,
     'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Teman
 ≫ Aku Ga Jawab PM Karna aq Cuma Bot Protect ≪
-≫ BOTTROX BOT PROTECT ≪
+≫ 🇲🇨⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱🇲🇨 ≪
 Ready:
 ≫ bot protect ≪
 ≫ SelfBot ≪
 ṡȗƿƿȏяṭєԀ ɞʏ:
   
-☆ BOTTROX BOT PROTECT ☆
+☆ 🇲🇨⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱🇲🇨 ☆
 
 Idline: http://line.me/ti/p/up3NLjmK17""",
     "lang":"JP",
-    "comment":"Thanks for add me",
+    "comment":"🇲🇨•••••••••Auto Like By•••••••••••••••••🇲🇨 http://line.me/ti/p/up3NLjmK17  『⊰์◉⊱B❂TTR❂X B❂T⊰์◉⊱』",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
@@ -207,22 +200,32 @@ def bot(op):
 
         #------Protect Group Kick start------#
         if op.type == 11:
-          if wait["Protectgr"] == True:
-            if op.param2 not in Bots:
-              G = random.choice(KAC).getGroup(op.param1)
-              G.preventJoinByTicket = True
-              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-              random.choice(KAC).updateGroup(G)
-              random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "Jangan Buka Kode QR Njiiir")
+           if wait["Protectgr"] == True:
+               if op.param2 not in Bots and admin:
+                   G = random.choice(KAC).getGroup(op.param1)
+                   G.preventJoinByTicket = True
+                   #random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                   random.choice(KAC).updateGroup(G)
+                   random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "Jangan Buka Kode QR Njiiir")
         #------Protect Group Kick finish-----#
 
         #------Cancel Invite User start------#
         if op.type == 13:
           if wait["Protectcancl"] == True:
-            if op.param2 not in Bots:
-              group = cl.getGroup(op.param1)
-              gMembMids = [contact.mid for contact in group.invitee]
-              random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
+            group = cl.getGroup(op.param1)
+            gMembMids = [contact.mid for contact in group.invitee]
+            if op.param2 not in Bots + admin:
+              if op.param2 in Bots + admin:
+                pass
+              else:
+                try:
+                  cl.cancelGroupInvitation(op.param1, gMembMids)
+                  cl.sendText(op.param1, "Mau Invite Siapa Kaka ??? \nJangan Sok Jadi Jagoan Deh Lu Njir.\nAdmin Bukan,Owner Juga Bukan\njadi aku Cancel😛")
+                  #random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                except:
+                  random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
+                  random.choice(KAC).sendText(op.param1, "Mau Invite Siapa Kaka ??? \nJangan Sok Jadi Jagoan Deh Lu Njir.\nAdmin Bukan,Owner Juga Bukan\nJadi aku Cancel😛")
+                  #random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
         #------Cancel Invite User Finish------#
             
         if op.type == 13:
